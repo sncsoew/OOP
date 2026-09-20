@@ -18,6 +18,12 @@ void swapElements(int &a,int &b,int (&arr)[10]){
     arr[b-1] = t;
 }
 
+void multiplyByTwo(int (&arr)[10]){
+    for (int &x: arr ){
+        x = x * 2; 
+    }
+}
+
 int main(){
     setlocale(LC_ALL, ".UTF-8");
     int array[10];
@@ -31,5 +37,6 @@ int main(){
     std::cout << "Введите второй индекс:" << std::endl;
     std::cin >> two;
     swapElements(one, two, array);
+    multiplyByTwo(array);
     return 0;
 }
