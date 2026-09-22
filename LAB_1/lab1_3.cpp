@@ -21,8 +21,15 @@ int& getElement(SafeArray& arr, int index){
     return arr.data[index];
 }
 
+void printSafe(const SafeArray& arr){
+    for(int i = 0; i <arr.size; ++i){
+        std::cout << arr.data[i] << " ";
+    }
+}
+
 int main(){
     setlocale(LC_ALL, ".UTF-8");
     SafeArray arr = createArray(5);
-    getElement(arr,6) = 100;
+    getElement(arr,3) = 100;
+    printSafe(arr);
 }
