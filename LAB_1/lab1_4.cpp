@@ -8,6 +8,14 @@ int** allocateMatrix(int rows, int cols){
     return matrix;
 }
 
+void  fillMatrix(int** matrix, int rows, int cols){
+    for(int i = 0; i<rows; i++){
+        for(int j =0; j<cols; j++){
+            std::cout << "Введите matrix[" << i << "][" << j << "]: ";
+            std::cin >> matrix[i][j];
+        }
+    }
+}
 
 
 int main(){
@@ -21,4 +29,5 @@ int main(){
     std::cin >> cols;
 
     int** matrix = allocateMatrix(rows, cols);
+    fillMatrix(matrix,rows,cols);
 }
