@@ -17,6 +17,40 @@ void  fillMatrix(int** matrix, int rows, int cols){
     }
 }
 
+void printMatrix(int** matrix, int rows, int cols, bool showBorders = true, std::string title = "Matrix"){
+    std::cout << "\n" << title << std::endl;
+    if (showBorders){
+        std::cout << "*";
+        for (int j = 0; j < cols; j++) {
+            std::cout << "---";
+        }
+        std::cout << "*" << std::endl;
+    }
+    for (int i = 0; i < rows; i++) {
+
+        if (showBorders) {
+            std::cout << "|";
+        }
+
+        for (int j = 0; j < cols; j++) {
+            std::cout << " " << matrix[i][j] << " ";
+        }
+
+        if (showBorders) {
+            std::cout << "|";
+        }
+
+        std::cout << std::endl;
+    }
+    if (showBorders) {
+        std::cout << "*";
+        for (int j = 0; j < cols; j++) {
+            std::cout << "---";
+        }
+        std::cout << "*" << std::endl;
+    }
+}
+
 
 int main(){
     setlocale(LC_ALL, ".UTF-8");
@@ -30,4 +64,7 @@ int main(){
 
     int** matrix = allocateMatrix(rows, cols);
     fillMatrix(matrix,rows,cols);
+    printMatrix(matrix, rows, cols);
+    printMatrix(matrix, rows, cols, false);
+    printMatrix(matrix, rows, cols, true, "Оценки студентов");
 }
