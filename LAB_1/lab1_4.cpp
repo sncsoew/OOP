@@ -51,6 +51,13 @@ void printMatrix(int** matrix, int rows, int cols, bool showBorders = true, std:
     }
 }
 
+void freeMatrix(int** matrix, int rows){
+    for(int i = 0; i< rows; i++){
+        delete[] matrix[i];
+    }
+    delete[] matrix;
+}
+
 
 int main(){
     setlocale(LC_ALL, ".UTF-8");
@@ -64,7 +71,14 @@ int main(){
 
     int** matrix = allocateMatrix(rows, cols);
     fillMatrix(matrix,rows,cols);
+
     printMatrix(matrix, rows, cols);
     printMatrix(matrix, rows, cols, false);
     printMatrix(matrix, rows, cols, true, "Оценки студентов");
+
+    freeMatrix(matrix, rows);
+
+    matrix = nullptr;
+
+    return 0;
 }
