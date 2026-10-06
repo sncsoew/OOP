@@ -43,5 +43,35 @@ int main()
 
     Guest guest4("Алексей Иванов", 16);
     room3.checkIn(guest4);
-    
+
+    std::cout << "\n=== СОСТОЯНИЕ ПОСЛЕ ОПЕРАЦИЙ ===\n";
+
+    std::cout << "\nКомната 1:";
+    room1.printInfo();
+
+    std::cout << "\nКомната 2:";
+    room2.printInfo();
+
+    std::cout << "\nКомната 3:";
+    room3.printInfo();
+
+    std::cout << "\n=== ПРОВЕРКА НЕЗАВИСИМОСТИ ОБЪЕКТОВ ===\n";
+
+    std::cout << "\nИзменяем только room2:\n";
+
+    room2.changePrice(500.0);
+    room2.checOut();
+
+    std::cout << "\nroom2 после изменений:";
+    room2.printInfo();
+
+    std::cout << "\nroom3 не должен измениться:";
+    room3.printInfo();
+
+    std::cout << "\n=== СЧЁТЧИК ОБЪЕКТОВ ===\n";
+    std::cout << "Количество существующих объектов HotelRoom: "
+              << HotelRoom::getObjectCount() << '\n';
+
+
+    return 0;
 }
