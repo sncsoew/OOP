@@ -1,6 +1,7 @@
 #ifndef HOTELROOM_H
 #define HOTELROOM_H
 
+#include <iostream>
 #include <string>
 
 
@@ -8,7 +9,31 @@
 
 class Guest
 {
+    private:
+    std::string name;
+    int age;
+
+    public:
+    Guest(): name("Не указан"), age(0) {}
+
+    Guest(const std::string& guestName, int guestAge)
+        : name(guestName), age(guestAge){}
     
+    std::string getName() const
+    {
+        return name;
+    }
+
+    int getAge() const
+    {
+        return age;
+    }
+
+    void printInfo() const
+    {
+        std::cout << "Имя гостя: " << name << '\n';
+        std::cout << "Возраст: " << age << '\n';
+    }
 };
 
 
