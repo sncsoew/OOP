@@ -22,4 +22,26 @@ int main()
 
     std::cout << "\nКомната 3:";
     room3.printInfo();
+
+    std::cout << "\n=== КОРРЕКТНЫЕ ОПЕРАЦИИ ===\n";
+
+    Guest guest2("Анна Смирнова", 30);
+    room1.checkIn(guest2);
+
+    room2.changePrice(300.0);
+
+    room3.checOut();
+
+    std::cout << "\n=== НЕКОРРЕКТНЫЕ ОПЕРАЦИИ ===\n";
+
+    Guest guest3("Пётр Иванов", 40);
+    room1.checkIn(guest3);
+
+    room3.checOut();
+
+    room2.changePrice(-100.0);
+
+    Guest guest4("Алексей Иванов", 16);
+    room3.checkIn(guest4);
+    
 }
