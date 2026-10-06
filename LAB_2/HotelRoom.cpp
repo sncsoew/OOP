@@ -105,3 +105,30 @@ Guest HotelRoom::getGuest() const
     return guest;
 }
 
+bool HotelRoom::checkIn(const Guest& newGuest)
+{
+    if (occupied)
+    {
+        std::cout << "Ошибка: комната уже занята.\n";
+        return false;
+    }
+
+    if (newGuest.getName() == "Не указан" ||
+        newGuest.getName().empty())
+    {
+        std::cout << "Ошибка: имя гостя не указано.\n";
+        return false;
+    }
+
+    if (newGuest.getAge() < 18)
+    {
+        std::cout << "Ошибка: гость должен быть совершеннолетним.\n";
+        return false;
+    }
+
+    guest = newGuest;
+    occupied = true;
+
+    std::cout << "Гость успешно заселён.\n";
+    return true;
+}
