@@ -132,3 +132,32 @@ bool HotelRoom::checkIn(const Guest& newGuest)
     std::cout << "Гость успешно заселён.\n";
     return true;
 }
+
+bool HotelRoom::checOut()
+{
+    if (!occupied)
+    {
+        std::cout << "Ошибка: комната уже свободна.\n";
+        return false;
+    }
+
+    occupied = false;
+    guest = Guest();
+
+    std::cout << "Гость успешно выселен.\n";
+    return true;
+}
+
+bool HotelRoom::changePrice(double newPrice)
+{
+    if (!isValidPrice(newPrice))
+    {
+        std::cout << "Ошибка: цена должна быть положительной.\n";
+        return false;
+    }
+
+    pricePerNight = newPrice;
+
+    std::cout << "Цена успешно изменена.\n";
+    return true;
+}
