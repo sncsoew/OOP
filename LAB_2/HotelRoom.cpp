@@ -161,3 +161,26 @@ bool HotelRoom::changePrice(double newPrice)
     std::cout << "Цена успешно изменена.\n";
     return true;
 }
+
+void HotelRoom::printInfo() const
+{
+    std::cout << "\n--- Информация о номере ---\n";
+    std::cout << "Номер комнаты: " << roomNumber << '\n';
+    std::cout << "Этаж: " << floor << '\n';
+    std::cout << "Цена за ночь: " << pricePerNight << '\n';
+
+    if (occupied)
+    {
+        std::cout << "Статус: занята\n";
+        guest.printInfo();
+    }
+    else
+    {
+        std::cout << "Статус: свободна\n";
+    }
+}
+
+int HotelRoom::getObjectCount()
+{
+    return objectCount;
+}
