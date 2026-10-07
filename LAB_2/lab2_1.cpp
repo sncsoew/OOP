@@ -2,6 +2,8 @@
 
 int main()
 {
+    setlocale(LC_ALL, ".UTF-8");
+    
     Guest guest1("Иван Иванович", 25);
 
     HotelRoom room1;
