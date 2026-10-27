@@ -61,3 +61,27 @@ std::string Fraction::toString() const {
     ++accessCount;
     return std::to_string(numerator) + "/" + std::to_string(denominator);
 }
+
+Fraction& Fraction::operator++() {
+    ++numerator;
+    normalize();
+    return *this;
+}
+
+Fraction Fraction::operator++(int) {
+    Fraction old(*this);
+    ++(*this);
+    return old;
+}
+
+Fraction& Fraction::operator--() {
+    --numerator;
+    normalize();
+    return *this;
+}
+
+Fraction Fraction::operator--(int) {
+    Fraction old(*this);
+    --(*this);
+    return old;
+}
