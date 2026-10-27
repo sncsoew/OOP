@@ -16,3 +16,20 @@ void Fraction::normalize() {
         denominator /= divisor;
     }
 }
+
+Fraction::Fraction() : numerator(0), denominator(1) {
+    ++objectCount;
+}
+
+Fraction::Fraction(long long wholeNumber) : numerator(wholeNumber), denominator(1) {
+    ++objectCount;
+}
+
+Fraction::Fraction(long long num, long long den) : numerator(num), denominator(den) {
+    normalize();
+    ++objectCount;
+}
+
+Fraction::Fraction(const Fraction& other): numerator(other.numerator), denominator(other.denominator) {
+    ++objectCount;
+}
