@@ -112,41 +112,155 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('lab1__1_8cpp.h
   <div class="headertitle"><div class="title">lab1_1.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa99823a0fc8313c9c32541ce768fb801" id="r_aa99823a0fc8313c9c32541ce768fb801"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aa99823a0fc8313c9c32541ce768fb801">add</a> (int a, int b)</td></tr>
-<tr class="memdesc:aa99823a0fc8313c9c32541ce768fb801"><td class="mdescLeft">&#160;</td><td class="mdescRight">Складывает два числа.  <br /></td></tr>
+<tr class="memitem:afa6a170da18a01e35c0a869ec25c1b5f" id="r_afa6a170da18a01e35c0a869ec25c1b5f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afa6a170da18a01e35c0a869ec25c1b5f">fillArray</a> (int(&amp;arr)[10])</td></tr>
+<tr class="memdesc:afa6a170da18a01e35c0a869ec25c1b5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заполняет массив десятью числами.  <br /></td></tr>
+<tr class="memitem:a4b420339986728dff0c4b7d6c657a9ec" id="r_a4b420339986728dff0c4b7d6c657a9ec"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4b420339986728dff0c4b7d6c657a9ec">printArray</a> (int(&amp;arr)[10])</td></tr>
+<tr class="memdesc:a4b420339986728dff0c4b7d6c657a9ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит массив на экран.  <br /></td></tr>
+<tr class="memitem:a2799c5a1d37ec2989d4e736da11f66f6" id="r_a2799c5a1d37ec2989d4e736da11f66f6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2799c5a1d37ec2989d4e736da11f66f6">swapElements</a> (int &amp;a, int &amp;b, int(&amp;arr)[10])</td></tr>
+<tr class="memdesc:a2799c5a1d37ec2989d4e736da11f66f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Меняет местами два элемента массива.  <br /></td></tr>
+<tr class="memitem:ab3a1e0edf7078e3c1b97da7b4a552f05" id="r_ab3a1e0edf7078e3c1b97da7b4a552f05"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab3a1e0edf7078e3c1b97da7b4a552f05">multiplyByTwo</a> (int(&amp;arr)[10])</td></tr>
+<tr class="memdesc:ab3a1e0edf7078e3c1b97da7b4a552f05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Умножает каждый элемент массива на два.  <br /></td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Главная функция программы.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="aa99823a0fc8313c9c32541ce768fb801" name="aa99823a0fc8313c9c32541ce768fb801"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa99823a0fc8313c9c32541ce768fb801">&#9670;&#160;</a></span>add()</h2>
+<a id="afa6a170da18a01e35c0a869ec25c1b5f" name="afa6a170da18a01e35c0a869ec25c1b5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa6a170da18a01e35c0a869ec25c1b5f">&#9670;&#160;</a></span>fillArray()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int add </td>
+          <td class="memname">void fillArray </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">int(&amp;)</td>          <td class="paramname"><span class="paramname"><em>arr</em></span>[10]</td><td>)</td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Складывает два числа. </p>
+<p>Заполняет массив десятью числами. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>Первое число. </td></tr>
-    <tr><td class="paramname">b</td><td>Второе число. </td></tr>
+    <tr><td class="paramname">arr</td><td>Массив из 10 целых чисел.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Сумма двух чисел. </dd></dl>
+<p>Считывает 10 чисел из стандартного ввода и записывает их в элементы массива. </p>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Главная функция программы. </p>
+<dl class="section return"><dt>Returns</dt><dd>0 При успешном завершении программы.</dd></dl>
+<p>Заполняет массив, выводит его на экран, меняет местами два выбранных элемента и умножает все элементы массива на два. </p>
+
+</div>
+</div>
+<a id="ab3a1e0edf7078e3c1b97da7b4a552f05" name="ab3a1e0edf7078e3c1b97da7b4a552f05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3a1e0edf7078e3c1b97da7b4a552f05">&#9670;&#160;</a></span>multiplyByTwo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void multiplyByTwo </td>
+          <td>(</td>
+          <td class="paramtype">int(&amp;)</td>          <td class="paramname"><span class="paramname"><em>arr</em></span>[10]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Умножает каждый элемент массива на два. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>Массив из 10 целых чисел.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Использует range-based for цикл с неконстантной ссылкой int&amp; для изменения каждого элемента массива. </p>
+
+</div>
+</div>
+<a id="a4b420339986728dff0c4b7d6c657a9ec" name="a4b420339986728dff0c4b7d6c657a9ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b420339986728dff0c4b7d6c657a9ec">&#9670;&#160;</a></span>printArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printArray </td>
+          <td>(</td>
+          <td class="paramtype">int(&amp;)</td>          <td class="paramname"><span class="paramname"><em>arr</em></span>[10]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выводит массив на экран. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>Массив из 10 целых чисел.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Использует range-based for цикл и auto для последовательного вывода элементов массива. </p>
+
+</div>
+</div>
+<a id="a2799c5a1d37ec2989d4e736da11f66f6" name="a2799c5a1d37ec2989d4e736da11f66f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2799c5a1d37ec2989d4e736da11f66f6">&#9670;&#160;</a></span>swapElements()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void swapElements </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(&amp;)</td>          <td class="paramname"><span class="paramname"><em>arr</em></span>[10]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Меняет местами два элемента массива. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Индекс первого элемента. </td></tr>
+    <tr><td class="paramname">b</td><td>Индекс второго элемента. </td></tr>
+    <tr><td class="paramname">arr</td><td>Массив из 10 целых чисел.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Меняет местами элементы массива с индексами a и b. Индексы вводятся начиная с 1. </p>
 
 </div>
 </div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['add_0',['add',['../lab1__1_8cpp.html#aa99823a0fc8313c9c32541ce768fb801',1,'lab1_1.cpp']]]
+  ['allocatematrix_0',['allocateMatrix',['../lab1__4_8cpp.html#a316a1e4a31e8d114fc40e8a6d5cf6d1f',1,'lab1_4.cpp']]]
 ];

@@ -1,0 +1,48 @@
+@startuml lab2
+
+title UML-диаграмма классов HotelRoom
+
+class Guest {
+    - name : string
+    - age : int
+
+    + Guest()
+    + Guest(guestName : string, guestAge : int)
+    + getName() : string
+    + getAge() : int
+    + printInfo() : void
+}
+
+class HotelRoom {
+    - roomNumber : int
+    - floor : int
+    - pricePerNight : double
+    - occupied : bool
+    - guest : Guest
+    - objectCount : int {static}
+
+    - isValidRoomNumber(number : int) : bool
+    - isValidFloor(floorNumber : int) : bool
+    - isValidPrice(price : double) : bool
+
+    + HotelRoom()
+    + HotelRoom(number : int, floorNumber : int, price : double)
+    + HotelRoom(other : const HotelRoom&)
+    + ~HotelRoom()
+
+    + getRoomNumber() : int
+    + getFloor() : int
+    + getPricePerNight() : double
+    + isOccupied() : bool
+    + getGuest() : Guest
+
+    + checkIn(newGuest : const Guest&) : bool
+    + checkOut() : bool
+    + changePrice(newPrice : double) : bool
+    + printInfo() : void
+    + getObjectCount() : int {static}
+}
+
+HotelRoom "1" *-- "1" Guest : содержит
+
+@enduml

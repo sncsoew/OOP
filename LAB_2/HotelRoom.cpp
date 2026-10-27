@@ -79,6 +79,10 @@ HotelRoom::~HotelRoom()
     --objectCount;
     std::cout << "Объект HotelRoom уничтожен.\n";
 }
+Guest::~Guest()
+{
+    std::cout << "Объект Guest уничтожен.\n";
+}
 
 int HotelRoom::getRoomNumber() const
 {

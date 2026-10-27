@@ -1,4 +1,8 @@
 var lab1__1_8cpp =
 [
-    [ "add", "lab1__1_8cpp.html#aa99823a0fc8313c9c32541ce768fb801", null ]
+    [ "fillArray", "lab1__1_8cpp.html#afa6a170da18a01e35c0a869ec25c1b5f", null ],
+    [ "main", "lab1__1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4", null ],
+    [ "multiplyByTwo", "lab1__1_8cpp.html#ab3a1e0edf7078e3c1b97da7b4a552f05", null ],
+    [ "printArray", "lab1__1_8cpp.html#a4b420339986728dff0c4b7d6c657a9ec", null ],
+    [ "swapElements", "lab1__1_8cpp.html#a2799c5a1d37ec2989d4e736da11f66f6", null ]
 ];
