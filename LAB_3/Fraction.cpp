@@ -116,3 +116,52 @@ Fraction& Fraction::operator/=(const Fraction& other) {
     normalize();
     return *this;
 }
+
+Fraction operator+(Fraction lhs, const Fraction& rhs) {
+    lhs += rhs;
+    return lhs;
+}
+
+Fraction operator-(Fraction lhs, const Fraction& rhs) {
+    lhs -= rhs;
+    return lhs;
+}
+
+Fraction operator*(Fraction lhs, const Fraction& rhs) {
+    lhs *= rhs;
+    return lhs;
+}
+
+Fraction operator/(Fraction lhs, const Fraction& rhs) {
+    lhs /= rhs;
+    return lhs;
+}
+
+bool operator==(const Fraction& lhs, const Fraction& rhs) {
+    return lhs.numerator == rhs.numerator && lhs.denominator == rhs.denominator;
+}
+
+bool operator!=(const Fraction& lhs, const Fraction& rhs) {
+    return !(lhs == rhs);
+}
+
+bool operator<(const Fraction& lhs, const Fraction& rhs) {
+    return lhs.numerator * rhs.denominator < rhs.numerator * lhs.denominator;
+}
+
+bool operator>(const Fraction& lhs, const Fraction& rhs) {
+    return rhs < lhs;
+}
+
+bool operator<=(const Fraction& lhs, const Fraction& rhs) {
+    return !(lhs > rhs);
+}
+
+bool operator>=(const Fraction& lhs, const Fraction& rhs) {
+    return !(lhs < rhs);
+}
+
+std::ostream& operator<<(std::ostream& out, const Fraction& f) {
+    out << f.numerator << "/" << f.denominator;
+    return out;
+}
