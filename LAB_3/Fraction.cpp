@@ -85,3 +85,34 @@ Fraction Fraction::operator--(int) {
     --(*this);
     return old;
 }
+
+Fraction& Fraction::operator+=(const Fraction& other) {
+    numerator = numerator * other.denominator + other.numerator * denominator;
+    denominator *= other.denominator;
+    normalize();
+    return *this;
+}
+
+Fraction& Fraction::operator-=(const Fraction& other) {
+    numerator = numerator * other.denominator - other.numerator * denominator;
+    denominator *= other.denominator;
+    normalize();
+    return *this;
+}
+
+Fraction& Fraction::operator*=(const Fraction& other) {
+    numerator *= other.numerator;
+    denominator *= other.denominator;
+    normalize();
+    return *this;
+}
+
+Fraction& Fraction::operator/=(const Fraction& other) {
+    if (other.numerator == 0) {
+        throw std::invalid_argument("Деление на нулевую дробь.");
+    }
+    numerator *= other.denominator;
+    denominator *= other.numerator;
+    normalize();
+    return *this;
+}
