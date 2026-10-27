@@ -33,3 +33,31 @@ Fraction::Fraction(long long num, long long den) : numerator(num), denominator(d
 Fraction::Fraction(const Fraction& other): numerator(other.numerator), denominator(other.denominator) {
     ++objectCount;
 }
+
+Fraction::~Fraction() {
+    --objectCount;
+    std::cout << "Объект Fraction уничтожен\n";
+}
+
+long long Fraction::getNumerator() const {
+    ++accessCount;
+    return numerator;
+}
+
+long long Fraction::getDenominator() const {
+    ++accessCount;
+    return denominator;
+}
+
+int Fraction::getAccessCount() const {
+    return accessCount;
+}
+
+int Fraction::getObjectCount() {
+    return objectCount;
+}
+
+std::string Fraction::toString() const {
+    ++accessCount;
+    return std::to_string(numerator) + "/" + std::to_string(denominator);
+}
