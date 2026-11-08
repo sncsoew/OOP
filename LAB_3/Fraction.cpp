@@ -21,7 +21,7 @@ void Fraction::normalize() {
         numerator = -numerator;
         denominator = -denominator;
     }
-    long long divisor = std::gcd(std::llabs(numerator), std::llabs(denominator));
+    int divisor = std::gcd(std::abs(numerator), std::abs(denominator));
     if (divisor != 0) {
         numerator /= divisor;
         denominator /= divisor;
@@ -44,7 +44,7 @@ Fraction::Fraction() : numerator(0), denominator(1) {
  * Знаменатель устанавливается равным единице.
  * Увеличивает счётчик объектов.
  */
-Fraction::Fraction(long long wholeNumber) : numerator(wholeNumber), denominator(1) {
+Fraction::Fraction(int wholeNumber) : numerator(wholeNumber), denominator(1) {
     ++objectCount;
 }
 
@@ -58,7 +58,7 @@ Fraction::Fraction(long long wholeNumber) : numerator(wholeNumber), denominator(
  *
  * @exception std::invalid_argument Если знаменатель равен нулю.
  */
-Fraction::Fraction(long long num, long long den) : numerator(num), denominator(den) {
+Fraction::Fraction(int num, int den) : numerator(num), denominator(den) {
     normalize();
     ++objectCount;
 }
@@ -91,7 +91,7 @@ Fraction::~Fraction() {
  *
  * Увеличивает счётчик обращений к объекту.
  */
-long long Fraction::getNumerator() const {
+int Fraction::getNumerator() const {
     ++accessCount;
     return numerator;
 }
@@ -102,7 +102,7 @@ long long Fraction::getNumerator() const {
  *
  * Увеличивает счётчик обращений к объекту.
  */
-long long Fraction::getDenominator() const {
+int Fraction::getDenominator() const {
     ++accessCount;
     return denominator;
 }

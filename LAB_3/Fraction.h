@@ -21,8 +21,8 @@
 
 class Fraction {
 private:
-    long long numerator;    ///< Числитель дроби.
-    long long denominator;  ///< Знаменатель дроби.
+    int numerator;    ///< Числитель дроби.
+    int denominator;  ///< Знаменатель дроби.
     mutable int accessCount = 0;    ///< Количество обращений к объекту через отслеживаемые методы.
     static int objectCount; ///< Количество существующих объектов класса Fraction.
     
@@ -55,7 +55,7 @@ public:
      * @note Ключевое слово explicit запрещает неявное преобразование
      * целого числа в объект Fraction.
      */
-    explicit Fraction(long long wholeNumber);
+    explicit Fraction(int wholeNumber);
 
     /**
      * @brief Конструктор дроби с заданными числителем и знаменателем.
@@ -66,7 +66,7 @@ public:
      *
      * @exception std::invalid_argument Если знаменатель равен нулю.
      */
-    Fraction(long long num, long long den);
+    Fraction(int num, int den);
 
     /**
      * @brief Конструктор копирования.
@@ -87,13 +87,13 @@ public:
      * @brief Возвращает числитель дроби.
      * @return Значение числителя.
      */
-    long long getNumerator() const;
+    int getNumerator() const;
 
     /**
      * @brief Возвращает знаменатель дроби.
      * @return Значение знаменателя.
      */
-    long long getDenominator() const;
+    int getDenominator() const;
     
     /**
      * @brief Возвращает количество обращений к объекту.

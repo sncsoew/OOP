@@ -1,0 +1,61 @@
+@startuml lab3
+
+title UML-диаграмма класса Fraction
+
+class Fraction {
+    - numerator : int
+    - denominator : int
+    - accessCount : int {mutable}
+    - objectCount : int {static}
+
+    - normalize() : void
+
+    + Fraction()
+    + Fraction(wholeNumber : int)
+    + Fraction(num : int, den : int)
+    + ~Fraction()
+
+    + getNumerator() : int
+    + getDenominator() : int
+    + getAccessCount() : int
+    + getObjectCount() : int {static}
+    + toString() : string
+
+    + operator++() : Fraction&
+    + operator++(int) : Fraction
+    + operator--() : Fraction&
+    + operator--(int) : Fraction
+
+    + operator+=(other : const Fraction&) : Fraction&
+    + operator-=(other : const Fraction&) : Fraction&
+    + operator*=(other : const Fraction&) : Fraction&
+    + operator/=(other : const Fraction&) : Fraction&
+
+    + operator+(lhs : const Fraction&, rhs : const Fraction&) : Fraction
+    + operator-(lhs : const Fraction&, rhs : const Fraction&) : Fraction
+    + operator*(lhs : const Fraction&, rhs : const Fraction&) : Fraction
+    + operator/(lhs : const Fraction&, rhs : const Fraction&) : Fraction
+
+    + operator==(lhs : const Fraction&, rhs : const Fraction&) : bool
+    + operator!=(lhs : const Fraction&, rhs : const Fraction&) : bool
+    + operator<(lhs : const Fraction&, rhs : const Fraction&) : bool
+    + operator>(lhs : const Fraction&, rhs : const Fraction&) : bool
+    + operator<=(lhs : const Fraction&, rhs : const Fraction&) : bool
+    + operator>=(lhs : const Fraction&, rhs : const Fraction&) : bool
+
+    + operator<<(out : ostream&, f : const Fraction&) : ostream&
+}
+
+note right of Fraction
+    Конструктор Fraction(int)
+    объявлен explicit.
+
+    accessCount объявлен mutable.
+
+    objectCount является static.
+
+    Бинарные операторы +, -, *, /
+    используют +=, -=, *=, /=.
+end note
+
+@enduml
