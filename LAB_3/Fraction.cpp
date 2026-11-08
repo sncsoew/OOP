@@ -4,6 +4,43 @@
 /// Инициализация статического счётчика объектов класса Fraction.
 int Fraction::objectCount = 0;
 
+std::string Fraction::history[Fraction::MAX_HISTORY];
+int Fraction::historyCount = 0;
+
+
+/**
+ * @brief Добавляет выполненную операцию в историю.
+ * @param operation Строка с описанием выполненной операции.
+ *
+ * Проверяет, не достигнуто ли максимальное количество записей.
+ * Если свободное место имеется, добавляет операцию в массив
+ * и увеличивает счётчик сохранённых операций.
+ */
+void Fraction::addToHistory(const std::string& operation) {
+    if (historyCount < MAX_HISTORY) {
+        history[historyCount++] = operation;
+    }
+}
+
+/**
+ * @brief Выводит историю выполненных операций.
+ *
+ * Проверяет наличие сохранённых операций.
+ * Если история пуста, выводит соответствующее сообщение.
+ * В противном случае выводит все операции с порядковыми номерами.
+ */
+void Fraction::showHistory() {
+    std::cout << "\nИстория операций:\n";
+
+    if (historyCount == 0) {
+        std::cout << "История пуста.\n";
+        return;
+    }
+
+    for (int i = 0; i < historyCount; ++i) {
+        std::cout << i + 1 << ". " << history[i] << '\n';
+    }
+}
 
 /**
  * @brief Нормализует дробь.
@@ -81,8 +118,9 @@ Fraction::Fraction(const Fraction& other): numerator(other.numerator), denominat
  * об уничтожении объекта.
  */
 Fraction::~Fraction() {
-    --objectCount;
+
     std::cout << "Объект Fraction уничтожен\n";
+    --objectCount;
 }
 
 /**
@@ -194,9 +232,21 @@ Fraction Fraction::operator--(int) {
  * Результат нормализуется перед возвратом.
  */
 Fraction& Fraction::operator+=(const Fraction& other) {
+    int oldNumerator = numerator;
+    int oldDenominator = denominator;
+    
     numerator = numerator * other.denominator + other.numerator * denominator;
     denominator *= other.denominator;
     normalize();
+
+    addToHistory(
+        std::to_string(oldNumerator) + "/" +
+        std::to_string(oldDenominator) + " += " +
+        std::to_string(other.numerator) + "/" +
+        std::to_string(other.denominator) + " = " +
+        std::to_string(numerator) + "/" +
+        std::to_string(denominator)
+    );
     return *this;
 }
 
@@ -208,9 +258,21 @@ Fraction& Fraction::operator+=(const Fraction& other) {
  * Результат нормализуется перед возвратом.
  */
 Fraction& Fraction::operator-=(const Fraction& other) {
+    int oldNumerator = numerator;
+    int oldDenominator = denominator;
+
     numerator = numerator * other.denominator - other.numerator * denominator;
     denominator *= other.denominator;
     normalize();
+
+    addToHistory(
+        std::to_string(oldNumerator) + "/" +
+        std::to_string(oldDenominator) + " -= " +
+        std::to_string(other.numerator) + "/" +
+        std::to_string(other.denominator) + " = " +
+        std::to_string(numerator) + "/" +
+        std::to_string(denominator)
+    );
     return *this;
 }
 
@@ -222,9 +284,21 @@ Fraction& Fraction::operator-=(const Fraction& other) {
  * Результат нормализуется перед возвратом.
  */
 Fraction& Fraction::operator*=(const Fraction& other) {
+    int oldNumerator = numerator;
+    int oldDenominator = denominator;
+
     numerator *= other.numerator;
     denominator *= other.denominator;
     normalize();
+
+    addToHistory(
+        std::to_string(oldNumerator) + "/" +
+        std::to_string(oldDenominator) + " *= " +
+        std::to_string(other.numerator) + "/" +
+        std::to_string(other.denominator) + " = " +
+        std::to_string(numerator) + "/" +
+        std::to_string(denominator)
+    );
     return *this;
 }
 
@@ -241,9 +315,22 @@ Fraction& Fraction::operator/=(const Fraction& other) {
     if (other.numerator == 0) {
         throw std::invalid_argument("Деление на нулевую дробь.");
     }
+
+    int oldNumerator = numerator;
+    int oldDenominator = denominator;
+    
     numerator *= other.denominator;
     denominator *= other.numerator;
     normalize();
+    
+    addToHistory(
+        std::to_string(oldNumerator) + "/" +
+        std::to_string(oldDenominator) + " /= " +
+        std::to_string(other.numerator) + "/" +
+        std::to_string(other.denominator) + " = " +
+        std::to_string(numerator) + "/" +
+        std::to_string(denominator)
+    ); 
     return *this;
 }
 
