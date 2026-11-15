@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['denominator_0',['denominator',['../class_fraction.html#a84f76fd67e2e84745fddb91c60f0584f',1,'Fraction']]]
+  ['denominator_0',['denominator',['../class_fraction.html#a079acff7892d39be395f14799244d044',1,'Fraction']]]
 ];

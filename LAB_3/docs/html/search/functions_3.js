@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normalize_0',['normalize',['../class_fraction.html#a5628d01bfa89456806ebfe18866d3b8e',1,'Fraction']]]
+  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]]
 ];

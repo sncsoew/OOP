@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['objectcount_0',['objectCount',['../class_fraction.html#aa04da8096466e005f466c344ee80361f',1,'Fraction']]]
+  ['max_5fhistory_0',['MAX_HISTORY',['../class_fraction.html#ad1c9f39fb042d358ad34f19c814465dc',1,'Fraction']]]
 ];

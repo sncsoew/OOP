@@ -7,8 +7,12 @@ class Fraction {
     - denominator : int
     - accessCount : int {mutable}
     - objectCount : int {static}
+    - MAX_HISTORY : const int {static}
+    - historyCount: int {static}
 
     - normalize() : void
+
+    - addToHistory() : void
 
     + Fraction()
     + Fraction(wholeNumber : int)
@@ -44,6 +48,8 @@ class Fraction {
     + operator>=(lhs : const Fraction&, rhs : const Fraction&) : bool
 
     + operator<<(out : ostream&, f : const Fraction&) : ostream&
+
+    + showHistory() : void
 }
 
 note right of Fraction

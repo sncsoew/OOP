@@ -114,13 +114,12 @@ Fraction::Fraction(const Fraction& other): numerator(other.numerator), denominat
 /**
  * @brief Деструктор класса Fraction.
  *
- * Уменьшает счётчик существующих объектов и выводит сообщение
+ * Выводит сообщение
  * об уничтожении объекта.
  */
 Fraction::~Fraction() {
-
     std::cout << "Объект Fraction уничтожен\n";
-    --objectCount;
+
 }
 
 /**
@@ -342,9 +341,15 @@ Fraction& Fraction::operator/=(const Fraction& other) {
  *
  * Использует оператор += для выполнения сложения.
  */
-Fraction operator+(Fraction lhs, const Fraction& rhs) {
-    lhs += rhs;
-    return lhs;
+// Fraction operator+(Fraction lhs, const Fraction& rhs) {
+//     lhs += rhs;
+//     return lhs;
+// }
+
+Fraction Fraction::operator+(const Fraction& other) const{
+    Fraction result = *this;
+    result += other;
+    return result;
 }
 
 /**

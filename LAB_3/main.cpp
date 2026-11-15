@@ -19,6 +19,7 @@ int main() {
     Fraction product = a * b;
     Fraction quotient = a / b;
 
+    Fraction simple = a + 5;
 
     Fraction c(1, 2);
     c += b;

@@ -68,7 +68,8 @@ public:
      * @note Ключевое слово explicit запрещает неявное преобразование
      * целого числа в объект Fraction.
      */
-    explicit Fraction(int wholeNumber);
+    Fraction(int wholeNumber);
+    // explicit Fraction(int wholeNumber);
 
     /**
      * @brief Конструктор дроби с заданными числителем и знаменателем.
@@ -191,8 +192,10 @@ public:
      * @param rhs Правая дробь.
      * @return Результат сложения.
      */
-    friend Fraction operator+(Fraction lhs, const Fraction& rhs);
     
+    // friend Fraction operator+(Fraction lhs, const Fraction& rhs);
+
+    Fraction operator+(const Fraction& other) const;    
     /**
      * @brief Вычитает одну дробь из другой.
      * @param lhs Левая дробь.

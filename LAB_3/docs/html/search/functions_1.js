@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['getaccesscount_0',['getAccessCount',['../class_fraction.html#ae6d88322717a85daa4849442ac37d549',1,'Fraction']]],
-  ['getdenominator_1',['getDenominator',['../class_fraction.html#a429d75b03b7bae1fac60611ae94dc11e',1,'Fraction']]],
-  ['getnumerator_2',['getNumerator',['../class_fraction.html#a38a45d39463a88d2755e3f6cb8ec533d',1,'Fraction']]],
-  ['getobjectcount_3',['getObjectCount',['../class_fraction.html#af8ea2e19d8e0ab16ff0348f3e5e1e680',1,'Fraction']]]
+  ['fraction_0',['Fraction',['../class_fraction.html#a29efaf0ef03cceab0bfa637e9eea2b7b',1,'Fraction::Fraction()'],['../class_fraction.html#a0bd905bea0987cdf0162d223766ff007',1,'Fraction::Fraction(int wholeNumber)'],['../class_fraction.html#a55b666fe7b94b74f21d4919d9110805d',1,'Fraction::Fraction(int num, int den)'],['../class_fraction.html#a259c7d93d9a22fe4d68d61ffad3c0349',1,'Fraction::Fraction(const Fraction &amp;other)']]]
 ];

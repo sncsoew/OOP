@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['normalize_0',['normalize',['../class_fraction.html#a5628d01bfa89456806ebfe18866d3b8e',1,'Fraction']]],
-  ['numerator_1',['numerator',['../class_fraction.html#af53793803fde403ec98e9a7c32751225',1,'Fraction']]]
+  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
+  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['max_5fhistory_2',['MAX_HISTORY',['../class_fraction.html#ad1c9f39fb042d358ad34f19c814465dc',1,'Fraction']]]
 ];

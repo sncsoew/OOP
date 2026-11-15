@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7efraction_0',['~Fraction',['../class_fraction.html#a65d231037bc28598a557336dad914ec8',1,'Fraction']]]
+  ['showhistory_0',['showHistory',['../class_fraction.html#aacd3d2d669ca8efb9166ca746a2ae905',1,'Fraction']]]
 ];

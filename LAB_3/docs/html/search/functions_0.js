@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fraction_0',['Fraction',['../class_fraction.html#a29efaf0ef03cceab0bfa637e9eea2b7b',1,'Fraction::Fraction()'],['../class_fraction.html#a90c2faea8326239fa408ff5c7fb5b986',1,'Fraction::Fraction(long long wholeNumber)'],['../class_fraction.html#ae0c655b819549c8153b573c5cfd93e1d',1,'Fraction::Fraction(long long num, long long den)'],['../class_fraction.html#a259c7d93d9a22fe4d68d61ffad3c0349',1,'Fraction::Fraction(const Fraction &amp;other)']]]
+  ['addtohistory_0',['addToHistory',['../class_fraction.html#a48aaa7850b2b2a3e2ead18029b90dd67',1,'Fraction']]]
 ];
