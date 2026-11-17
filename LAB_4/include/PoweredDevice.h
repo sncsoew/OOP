@@ -5,7 +5,7 @@
 
 class PoweredDevice : public SmartDevice {
 protected:
-    double powerConsuption;
+    double powerConsumption;
 public:
     static double totalEnergyKWh;
 
