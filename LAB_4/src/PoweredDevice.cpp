@@ -3,18 +3,18 @@
 double PoweredDevice::totalEnergyKWh = 0.0;
 
 PoweredDevice::PoweredDevice(const char* n, double power) 
-    : SmartDevice(n), powerConsuption(power) {
+    : SmartDevice(n), powerConsumption(power) {
 }
 
 PoweredDevice::PoweredDevice(const PoweredDevice& other)
-    : SmartDevice(other), powerConsuption(other.powerConsuption){
+    : SmartDevice(other), powerConsumption(other.powerConsumption){
 
 }
 
 PoweredDevice& PoweredDevice::operator=(const PoweredDevice& other){
     if (this != &other) {
         SmartDevice::operator=(other);
-        powerConsuption = other.powerConsuption;
+        powerConsumption = other.powerConsumption;
     }
     return *this;
 }
@@ -24,7 +24,7 @@ PoweredDevice::~PoweredDevice() {}
 void PoweredDevice::turnOn() {
     if (!isOn) {
         isOn = true;
-        totalEnergyKWh += powerConsuption / 1000.0;
+        totalEnergyKWh += powerConsumption / 1000.0;
     }
 }
 
@@ -41,7 +41,7 @@ const char* PoweredDevice::getDeviceType() const {
 }
 
 double PoweredDevice::getPowerUsage() const {
-    return isOn ? powerConsuption : 0.0;
+    return isOn ? powerConsumption : 0.0;
 }
 
 double PoweredDevice::getTotalEnergyConsumed() {
